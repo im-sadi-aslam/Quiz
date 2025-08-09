@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Neon HTML Quiz</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <div class="card-quiz">
+      <div class="header-row">
+        <div>
+          <h1 class="title">Neon HTML Quiz</h1>
+          <div class="user-name" id="greeting">Welcome — please enter your name below</div>
+        </div>
+        <div style="display:flex;gap:10px;align-items:center">
+          <div class="timer" id="timerDisplay">30:00</div>
+        </div>
+      </div>
+      <div id="startArea" style="margin-top:14px">
+        <label class="input-label">Your name</label>
+        <input id="nameInput" class="text-input" placeholder="e.g. Sadaf Aslam" />
+        <div style="display:flex;gap:10px;margin-top:8px">
+          <button id="startBtn" class="btn-neon">Start Quiz</button>
+          <button id="clearBtn" class="btn-neon" style="border-color:var(--neon-pink);color:var(--neon-pink)">Clear name</button>
+        </div>
+      </div>
+      <div id="quizArea" style="display:none;">
+        <div class="question-box">
+          <p class="q-text" id="questionText">Question text</p>
+          <div class="options" id="optionsContainer"></div>
+        </div>
+
+        <div class="controls">
+          <div class="progress-wrap">
+            <div style="display:flex;justify-content:space-between;font-size:0.9rem;margin-bottom:8px;color:var(--muted)">
+              <div id="qcount">Q 1 / 30</div>
+              <div id="scoreDisplay">Score: 0</div>
+            </div>
+            <div class="prog-bar"><div id="progFill" class="prog-fill"></div></div>
+          </div>
+
+          <div style="display:flex;gap:8px">
+            <button id="prevBtn" class="btn-neon">Previous</button>
+            <button id="nextBtn" class="btn-neon" disabled>Next</button>
+          </div>
+        </div>
+      </div>
+      <div id="resultArea" style="display:none;margin-top:14px">
+        <div class="result" id="resultBox"></div>
+        <div style="display:flex;gap:10px;margin-top:10px">
+          <button id="retryBtn" class="btn-neon">Retry</button>
+          <button id="saveBtn" class="btn-neon">Save Score</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+<script src="app.js"></script>
+</html>
